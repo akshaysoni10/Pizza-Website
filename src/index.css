@@ -1,0 +1,384 @@
+body{
+  background-image: url(./images/background.jpg);
+}
+
+.nav-items a{
+  float: right;
+  color: #fff;
+  /* padding: 20px; */
+  padding-right: 30px;
+  text-decoration: none;
+  font-size: 20px;
+  margin: 15px 20px;
+  position: relative;
+}
+
+.nav-items a::after{
+  content: '';
+  width: 0;
+  height: 3px;
+  bottom: -3px;
+  left: 50%;
+  transform: translateX(-90%);
+  background: white;
+  position: absolute;
+  transition: width 0.3s;
+}
+
+.nav-items a:hover::after{
+  width: 50%;
+}
+
+.heading{
+  margin-left: 35rem;
+  margin-top: -9rem;
+  font-size: 60px;
+  color: transparent;
+  -webkit-text-stroke: 1px #fff;
+  background: url(./images/text-bg.jpg);
+  -webkit-background-clip: text;
+  background-clip: text;
+  background-position: 0 0;
+  animation: back 15s linear infinite;
+}
+
+@keyframes back {
+  100%{
+    background-position: 2000px 0;
+  }
+}
+
+.logo{
+  border-radius: 50%;
+  width: 150px;
+}
+
+.content{
+  margin: 50px 10px;
+  font-size: 30px;
+  font-family: 'Times New Roman', Times, serif;
+  font-style: italic;
+  padding: 10px;
+  justify-content: space-between;
+  color: transparent;
+  -webkit-text-stroke: 1px rgb(206, 187, 118);
+  background: url(./images/text-bg.jpg);
+  -webkit-background-clip: text;
+  background-clip: text;
+  background-position: 0 0;
+  animation: animate 10s ease-in-out infinite;
+}
+
+@keyframes animate {
+  100%{
+    background-position: 2000px 0;
+  }
+}
+
+.caption{
+  color:#fff;
+  font-size: 40px;
+  position: absolute;
+  margin-left: 10rem;
+  margin-top: 8rem;
+}
+
+.chef{
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  margin-left: 60rem;
+  margin-bottom: 3rem;
+  position: relative;
+}
+
+section{
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+}
+
+section p{
+  font-family: 'Noto Sans', sans-serif;
+  font-size: 14px;
+  line-height: 25px;
+}
+
+section h1{
+  font-family: 'Roboto', sans-serif;
+  font-size: 25px;
+}
+
+section div{
+  height: 330px;
+  width: 250px;
+  color: #fff;
+  padding: 30px;
+  border-radius: 14px;
+  min-width: 250px;
+  box-shadow: 12px 0px 32px -12px white;
+  margin-left: -130px;
+  transition: all 0.25s ease-in-out;
+  cursor: pointer;
+}
+
+section div, button:nth-child(1){
+  background: #136AD5;
+}
+
+section div:nth-child(2){
+  background: #296432;
+}
+
+section div:nth-child(3){
+  background: #764AF1;
+}
+
+section div:nth-child(4){
+  background: #F76E11;
+}
+
+section div:nth-child(5){
+  background: #F24A72;
+}
+
+section div:hover{
+  transform: translateX(-16px) rotate(3deg);
+}
+
+section div:hover ~ div{
+  transform: translateX(130px);
+}
+
+section button{
+  font-size: 20px;
+  font-weight: bold;
+  background-color: #04AA6D;
+  padding: 8px;
+  margin-left: 3rem;
+  border-radius: 10px;
+  border: 2px solid rgb(255, 127, 47);
+  text-align: center;
+  text-decoration: none;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+section button:hover{
+  background-color: #6ccdae;
+  color: red;
+}
+
+.title-word{
+  animation: color-animation 4s linear infinite;
+}
+
+.tw-1{
+  --color-1:#DF8453;
+  --color-2:#3D8DAE;
+  --color-3:#E4A9A8;
+}
+
+.tw-2{
+  --color-1:#DBAD4A;
+  --color-2:#ACCFCB;
+  --color-3:#17494D;
+}
+
+.tw-3{
+  --color-1:#ACCFCB;
+  --color-2:#E4A9A8;
+  --color-3:#ACCFCB;
+}
+
+@keyframes color-animation {
+  0% {color:var(--color-1)}
+  32% {color:var(--color-1)}
+  33% {color:var(--color-2)}
+  65% {color:var(--color-2)}
+  66% {color:var(--color-3)}
+  99% {color:var(--color-3)}
+  100% {color:var(--color-1)}
+}
+
+.container{
+  display: grid;
+  place-items: center;
+  text-align: center;
+}
+
+.deal-txt{
+  font-weight: 800;
+  font-size: 60px;
+}
+
+.small{
+  width: 300px;
+  height: 300px;
+  margin-left: 10rem;
+  border-radius: 10px 10px 0 0;
+}
+
+.medium{
+  width: 300px;
+  height: 300px;
+  margin-left: 8rem;
+  border-radius: 10px 10px 0 0;
+}
+
+.large{
+  width: 300px;
+  height: 300px;
+  margin-left: 8rem;
+  border-radius: 10px 10px 0 0;
+}
+
+.box-1{
+  width: 300px;
+  height: 100px;
+  background-color: #fff;
+  border-radius: 0px 0px 10px 10px;
+  margin-left: 10rem;
+  position: relative;
+  margin-top: -1.5rem;
+}
+
+.box-2{
+  width: 300px;
+  height: 100px;
+  background-color: #fff;
+  border-radius: 0px 0px 10px 10px;
+  margin-left: 36.8rem;
+  position: relative;
+  margin-top: -7.6rem;
+  /* margin-top: -7.9rem; */
+}
+
+.box-3{
+  width: 300px;
+  height: 100px;
+  background-color: #fff;
+  border-radius: 0px 0px 10px 10px;
+  margin-left: 63.5rem;
+  position: relative;
+  margin-top: -7.5rem;
+}
+
+.small-txt, .medium-txt, .large-txt{
+  font-size: 20px;
+  text-align: center;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-weight: bold;
+}
+
+.view-btn{
+  margin-left: 7rem;
+  padding: 10px;
+  width: 100px;
+  border-radius: 10px;
+  font-size: 20px;
+  text-decoration: none;
+  background-color: #b08240;
+  cursor: pointer;
+  border: 1px solid blue;
+}
+
+.view-btn:hover{
+  background-color: #04AA6D;
+}
+
+.footer-container{
+  width: 101%;
+  height: 500px;
+  background-color: black;
+  margin-top: 8rem;
+  position: relative;
+}
+
+.order, .about, .policy{
+  color: #fff;
+  position: absolute;
+  margin-top: 5rem;
+}
+
+.order, .order-li{
+  margin-left: 20rem;
+}
+
+.about, .about-li{
+  margin-left: 40rem;
+}
+
+.policy, .policy-li{
+  margin-left: 60rem;
+}
+
+.order-li, .about-li, .policy-li{
+  color: #fff;
+  position: absolute;
+  margin-top: 8rem;
+}
+
+.feedback-txt{
+  position: absolute;
+  color: #fff;
+  margin-top: 17rem;
+  margin-left: 20rem;
+}
+
+.fdbk-btn{
+  position: absolute;
+  margin-top: 17rem;
+  margin-left: 33rem;
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.fdbk-btn:hover{
+  background-color: #73c6cb;
+  transition: 0.4s;
+}
+
+.follow{
+  position: absolute;
+  color: #fff;
+  margin-top: 17rem;
+  margin-left: 60rem;
+}
+
+.social-container{
+  position: absolute;
+  margin-left: 56rem;
+  margin-top: 17rem;
+}
+
+.twitter{
+  margin-left: 4rem;
+}
+
+.instagram{
+  margin-left: 4rem;
+}
+
+.thank-txt{
+  position: absolute;
+  color: #fff;
+  margin-left: 15rem;
+  margin-top: 28rem;
+}
+
+.thanks{
+  position: absolute;
+  width: 150px;
+  height: 50px;
+  margin-left: 67rem;
+  margin-top: -3rem;
+}
+
+.contact-part, .home-part, .about-part, .details-part{
+  color: #fff;
+}
